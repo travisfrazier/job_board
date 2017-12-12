@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-default">
+  <nav id="navbar-desktop" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">TECH LIST</a>
@@ -26,6 +26,25 @@
       </ul>
     </div>
   </nav>
+
+  <nav id="navbar-mobile" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+      </div>
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'All Jobs', root_path %></li>
+        <% Category.all.each do |category| %>
+        <li><%= link_to category.name, jobs_path(category: category.name) %></li>
+        <% end %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li id="job-post" class="align-middle job-post"><%= link_to 'POST JOB', new_job_path %></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  
 
   <div class="container-fluid jumbotron text-center">
     <h1>CHARLOTTE TECH LIST</h1>

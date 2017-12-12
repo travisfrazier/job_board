@@ -32,6 +32,8 @@
 body {
   font-family: 'Nunito Sans', sans-serif;  
   color: #2e2e2e;
+  font-size: 18px !important;
+  padding-top: 50px;
 }
 
 a:hover {
@@ -154,4 +156,48 @@ body {
 
 .new-container {
   padding-bottom: 3rem !important;
+}
+
+#show {
+  padding-bottom: 3rem;
+}
+
+#experience {
+  font-style: italic;
+}
+
+#navbar-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  #navbar-desktop {
+    display: none !important;
+  }
+  
+  body {
+    padding-top: 75px;
+    font-size: 16px !important;
+  }
+
+  #navbar-mobile {
+    display: inline;
+    font-size: 16px;
+    background-color: #252323 !important;
+    display: flex;
+    text-align: center;
+  }
+  #navbar-mobile li {
+    margin-bottom: -10px !important;
+    padding-bottom: 0px !important;
+    display: inline-block;
+    margin-left: -10px;
+  }
+  .navbar-right #job-post {
+    color: greenyellow !important;
+    text-decoration: underline !important;
+  }
+  .jumbotron h1 {
+    font-size: 3.25rem;
+  }
 }

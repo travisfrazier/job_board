@@ -1,8 +1,8 @@
 
 <div class="container">
-  <h2>Newest jobs</h2>
-  <div class="table-responsive">
-    <table data-role="table" class="table-condensed table-responsive table-hover">
+  <div class="table-responsive col col-md-9">
+    <h2>Newest jobs</h2>
+    <table data-role="table" id="table" class="table-condensed table-responsive table-hover">
       <thead>
         <tr>
           <th>Title</th>
@@ -16,17 +16,26 @@
       <tbody>
         <% @jobs.each do |job| %>
           <tr>
-            <td><%= job.title %></td>
+            <td id="title"><%= job.title %></td>
             <td><%= job.company %></td>
             <%# <td><%= link_to job.url, job.url %>
-            <td><%= job.category.name %></td>
-            <td><%= link_to 'View', job %></td>
-            <td><%= link_to 'Edit', edit_job_path(job) %></td>
-            <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td id="experience"><%= job.category.name %></td>
+            <td><%= link_to 'Details', job %></td>
+            <%# <td><%= link_to 'Edit', edit_job_path(job) %>
+            <%# <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%# add the end td tags to the three lines above to get them working again %>
           </tr>
         <% end %>
       </tbody>
     </table>
+  </div>
+  <div class="col col-md-3">
+    <h3>About</h3>
+    <p>
+      Charlotte Tech List is a one stop convient way to find the most desired tech jobs all in one place.
+      Every posting is reviewed by our moderators to make sure the information is accurate and up to date.
+      Happy job hunting!
+    </p>
   </div>
 </div>
 
