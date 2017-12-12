@@ -10,9 +10,148 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Catamaran:400,700|Nunito+Sans:400,700');
+ @import url('https://fonts.googleapis.com/css?family=Bungee');
+ @import url('https://fonts.googleapis.com/css?family=Monoton|Press+Start+2P');
+ 
+ * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  color: #2e2e2e;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;  
+  color: #2e2e2e;
+}
+
+a:hover {
+  text-decoration-style: none;
+  background-color: #399bd1;  
+}
+
+.btn-primary {
+  width: 11.4rem;
+  background-color: #399bd1;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  background-color: #399bd1;
+}
+
+.btn-primary:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  background-color: #399bd1;
+}
+
+.jumbotron h1 {
+  font-size: 5rem;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 3px 3px #444141;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jumbotron {
+  margin-top: 0;
+  background-image: url("http://www.charlottesgotalot.com/sites/default/master/files/1411431676-clt-1.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  opacity: 0.7;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+
+.navbar {
+  margin-bottom: 0rem;
+}
+
+.job-post {
+  vertical-align: baseline;
+}
+
+// nav styles
+body > nav {
+  background-color: #252323 !important;
+  border: none !important;
+  border-radius: none !important;
+}
+
+.navbar-nav a {
+  color: white !important;
+}
+
+.navbar-nav a:hover {
+  color: greenyellow !important;
+}
+
+body > nav > div > div > a {
+  color: white !important;
+}
+
+body > nav {
+  border-radius: 0px !important;
+}
+
+// footer styles 
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #252323;
+  color: white;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer p {
+  color: white;
+}
+
+.footer a:visited {
+  color: white;
+}
+
+.footer a:hover {
+  color: greenyellow;
+  background-color: #252323;
+  text-decoration: none;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 100px; /* bottom = footer height */
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
+
+.new-container {
+  padding-bottom: 3rem !important;
+}

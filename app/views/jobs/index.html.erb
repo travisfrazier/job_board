@@ -1,39 +1,35 @@
-<p id="notice"><%= notice %></p>
 
-<div class="header">
-  <h1>Charlotte Tech List</h1>
-  <span><%= link_to 'Post Job', new_job_path %></span>
+<div class="container">
+  <h2>Newest jobs</h2>
+  <div class="table-responsive">
+    <table data-role="table" class="table-condensed table-responsive table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <%# <th>Link and Description</th> %>
+          <th>Experience</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @jobs.each do |job| %>
+          <tr>
+            <td><%= job.title %></td>
+            <td><%= job.company %></td>
+            <%# <td><%= link_to job.url, job.url %>
+            <td><%= job.category.name %></td>
+            <td><%= link_to 'View', job %></td>
+            <td><%= link_to 'Edit', edit_job_path(job) %></td>
+            <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-
-<h2>Newest jobs</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Company</th>
-      <th>Description</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @jobs.each do |job| %>
-      <tr>
-        <td><%= job.title %></td>
-        <td><%= job.company %></td>
-        <td><%= job.description %></td>
-        <td><%= job.url %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Job', new_job_path %>
+<%# <%= link_to 'New Job', new_job_path %>

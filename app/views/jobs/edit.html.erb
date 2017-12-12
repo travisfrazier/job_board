@@ -1,6 +1,12 @@
-<h1>Editing Job</h1>
+<div class="container">
+  <h1>Edit Job</h1>
 
-<%= render 'form', job: @job %>
-
-<%= link_to 'Show', @job %> |
-<%= link_to 'Back', jobs_path %>
+  <%= simple_form_for @job do |form| %>
+    <%= form.input :title, label: "Job title" %>
+    <%= form.input :company, label: "Company name" %>
+    <%= form.input :description, label: "Job description" %>
+    <%= form.input :url, label: "Link to job" %>
+    <%= form.input :category_id, :collection => Category.all, :label_method => :name, :value_method => :id, :label => "Categories", :prompt => "-- Select Category --", class: "form-control" %>
+    <%= form.button :submit %>
+  <% end %>
+</div>
