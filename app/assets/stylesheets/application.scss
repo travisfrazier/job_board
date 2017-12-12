@@ -176,7 +176,7 @@ body {
   }
   
   body {
-    padding-top: 75px;
+    padding-top: 115px;
     font-size: 16px !important;
   }
 
@@ -186,18 +186,40 @@ body {
     background-color: #252323 !important;
     display: flex;
     text-align: center;
+    padding-bottom: 15px;
   }
   #navbar-mobile li {
     margin-bottom: -10px !important;
     padding-bottom: 0px !important;
     display: inline-block;
     margin-left: -10px;
+    margin-bottom: 0px !important;
   }
   .navbar-right #job-post {
     color: greenyellow !important;
-    text-decoration: underline !important;
   }
   .jumbotron h1 {
     font-size: 3.25rem;
   }
+
+  #job-post {
+    padding-bottom: 0rem !important;
+    font-size: 14px !important;
+    margin-bottom: 2rem;
+  }
+
+  .btn-xs {
+    padding: 0px !important;
+    margin-top: 0px;
+  }
+
+  #navbar-mobile ul, li {
+    margin-bottom: 0px;
+  }
+
+  #navbar-mobile > div > ul.nav.navbar-nav.navbar-right {
+    margin: 0;
+  }
+ 
+
 }
