@@ -14,10 +14,9 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
- @import url('https://fonts.googleapis.com/css?family=Catamaran:400,700|Nunito+Sans:400,700');
  @import url('https://fonts.googleapis.com/css?family=Bungee');
  @import url('https://fonts.googleapis.com/css?family=Monoton|Press+Start+2P');
- 
+ @import url('https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Condensed'); 
  * {
   margin: 0;
   padding: 0;
@@ -30,9 +29,9 @@
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;  
+  font-family: 'Roboto Condensed', sans-serif;  
   color: #2e2e2e;
-  font-size: 18px !important;
+  font-size: 16px !important;
   padding-top: 50px;
 }
 
@@ -119,6 +118,7 @@ body > nav {
   background-color: #252323;
   color: white;
   margin-top: 50px;
+  font-size: 1.5rem;
 }
 
 .footer a {
@@ -170,6 +170,12 @@ body {
   display: none;
 }
 
+// TABEL STYLES 
+
+td {
+  font-size: 1.35rem;
+}
+
 @media only screen and (max-width: 750px) {
   #navbar-desktop {
     display: none !important;
@@ -211,6 +217,7 @@ body {
   .btn-xs {
     padding: 0px !important;
     margin-top: 0px;
+    vertical-align: center;
   }
 
   #navbar-mobile ul, li {
